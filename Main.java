@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         Main main = new Main();
@@ -108,14 +107,8 @@ public class Main {
         String[] stringArray = arr1input.split(" ");
         int[] arr1 = new int[stringArray.length];
         for (int i = 0; i < stringArray.length; i++) {
-            try {
-                arr1[i] = Integer.parseInt(stringArray[i]);
-            } catch (NumberFormatException e) {
-                System.out.println("Ошибка: введены некорректные данные. Введите числа через пробел.");
-                return;
-            }
+            arr1[i] = Integer.parseInt(stringArray[i]);
         }
-        System.out.println("Массив чисел: " + Arrays.toString(arr1));
         System.out.print("Введите число для поиска: ");
         int x2 = scanner.nextInt();
         scanner.nextLine();
