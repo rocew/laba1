@@ -108,7 +108,7 @@ public class Main {
         int[] arr1 = new int[stringArray.length];
         for (int i = 0; i < stringArray.length; i++) {
             arr1[i] = Integer.parseInt(stringArray[i]);
-        }
+            }
         System.out.print("Введите число для поиска: ");
         int x2 = scanner.nextInt();
         scanner.nextLine();
@@ -141,7 +141,6 @@ public class Main {
         scanner.nextLine();
         int[] result = main.add(arr5, ins, pos);
         if (result != null) {
-            System.out.print("Ответ: ");
             for (int num2 : result) {
                 System.out.print(num2 + " ");
             }
@@ -156,7 +155,6 @@ public class Main {
             arr7[i] = Integer.parseInt(arr7Input[i]);
         }
         int[] reversedArr = main.reverseBack(arr7);
-        System.out.print("Ответ: ");
         for (int num3 : reversedArr) {
             System.out.print(num3 + " ");
         }
@@ -173,7 +171,6 @@ public class Main {
         int xx = scanner.nextInt();
         scanner.nextLine();
         int[] result4 = main.findAll(arr9, xx);
-        System.out.print("Ответ: ");
         for (int index : result4) {
             System.out.print(index + " ");
         }
@@ -406,6 +403,7 @@ public class Main {
     }
 
     public int[] add(int[] arr, int[] ins, int pos) {
+        System.out.print("  Ответ: ");
         if (pos < 0 || pos > arr.length) {
             return null;
         }
@@ -417,6 +415,7 @@ public class Main {
     }
 
     public int[] reverseBack(int[] arr) {
+        System.out.print("  Ответ: ");
         int[] reversed = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             reversed[i] = arr[arr.length - 1 - i];
