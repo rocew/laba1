@@ -4,131 +4,204 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         Main main = new Main();
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Задание 1.1: ");
-        System.out.println(main.fraction(5.25));
-        System.out.println(main.fraction(2.75));
+        System.out.print("Введите число с дробной частью: ");
+        double frac = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println(main.fraction(frac));
 
         System.out.println("Задание 1.3: ");
-        System.out.println(main.charToNum('3'));
-        System.out.println(main.charToNum('9'));
-        System.out.println(main.charToNum('0'));
+        System.out.print("Введите символ цифры: ");
+        char charInput = scanner.next().charAt(0);
+        scanner.nextLine();
+        System.out.println(main.charToNum(charInput));
 
         System.out.println("Задание 1.5: ");
-        System.out.println(main.is2Digits(32));
-        System.out.println(main.is2Digits(516));
-        System.out.println(main.is2Digits(-20));
+        System.out.print("Введите число для проверки на двузначность: ");
+        int twoDigitsInput = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.is2Digits(twoDigitsInput));
 
         System.out.println("Задание 1.7: ");
-        System.out.println(main.isInRange(5, 1, 3));
-        System.out.println(main.isInRange(2, 15, 33));
+        System.out.print("Введите три числа (a, b, num): ");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int num = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.isInRange(a, b, num));
 
         System.out.println("Задание 1.9: ");
-        System.out.println(main.isEqual(3, 3, 3));
-        System.out.println(main.isEqual(2, 15, 2));
+        System.out.print("Введите три числа (a, b, c): ");
+        int a1 = scanner.nextInt();
+        int b1 = scanner.nextInt();
+        int c1 = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.isEqual(a1, b1, c1));
 
         System.out.println("Задание 2.1: ");
-        System.out.println(main.abs(5));
-        System.out.println(main.abs(-3));
+        System.out.print("Введите число для вычисления модуля: ");
+        int absInput = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.abs(absInput));
 
         System.out.println("Задание 2.3: ");
-        System.out.println(main.is35(5));
-        System.out.println(main.is35(8));
-        System.out.println(main.is35(15));
-        System.out.println(main.is35(44));
+        System.out.print("Введите число для проверки на делимость на 3 или 5: ");
+        int is35Input = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.is35(is35Input));
 
         System.out.println("Задание 2.5: ");
-        System.out.println(main.max3(5, 7, 7));
-        System.out.println(main.max3(8, -1, 4));
-        System.out.println(main.max3(2, 2, 2));
+        System.out.print("Введите три числа (x, y, z): ");
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        int z = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.max3(x, y, z));
 
         System.out.println("Задание 2.7: ");
-        System.out.println(main.sum2(5, 7));
-        System.out.println(main.sum2(8, -1));
-        System.out.println(main.sum2(19, 10));
+        System.out.print("Введите два числа (x, y): ");
+        int x1 = scanner.nextInt();
+        int y1 = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.sum2(x1, y1));
 
         System.out.println("Задание 2.9: ");
-        System.out.println(main.day(5));
-        System.out.println(main.day(4));
-        System.out.println(main.day(15));
+        System.out.print("Введите число от 1 до 7 для определения дня недели: ");
+        int dayInput = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.day(dayInput));
 
         System.out.println("Задание 3.1: ");
-        System.out.println(main.listNums(5));
-        System.out.println(main.listNums(2));
+        System.out.print("Введите число для вывода списка чисел: ");
+        int listNumsInput = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.listNums(listNumsInput));
 
         System.out.println("Задание 3.3: ");
-        System.out.println(main.chet(9));
-        System.out.println(main.chet(12));
+        System.out.print("Введите число для вывода четных чисел: ");
+        int chetInput = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.chet(chetInput));
 
         System.out.println("Задание 3.5: ");
-        System.out.println(main.numLen(12567));
-        System.out.println(main.numLen(2456534));
+        System.out.print("Введите число для подсчета количества цифр: ");
+        long numLenInput = scanner.nextLong();
+        scanner.nextLine();
+        System.out.println(main.numLen(numLenInput));
 
         System.out.println("Задание 3.7: ");
-        main.square(2);
-        main.square(4);
+        System.out.print("Введите число для вывода квадрата: ");
+        int squareInput = scanner.nextInt();
+        scanner.nextLine();
+        main.square(squareInput);
 
         System.out.println("Задание 3.9: ");
-        main.rightTriangle(3);
-        main.rightTriangle(4);
+        System.out.print("Введите число для вывода прямоугольного треугольника: ");
+        int rightTriangleInput = scanner.nextInt();
+        scanner.nextLine();
+        main.rightTriangle(rightTriangleInput);
 
         System.out.println("Задание 4.1: ");
-        int[] arr = {1, 2, 3, 4, 2, 2, 5};
-        System.out.println("  Массив чисел: " + Arrays.toString(arr));
-        int x = 5;
-        System.out.println(main.findFirst(arr, x));
+        System.out.print("Введите элементы массива через пробел: ");
+        String arr1input = scanner.nextLine();
+        String[] stringArray = arr1input.split(" ");
+        int[] arr1 = new int[stringArray.length];
+        for (int i = 0; i < stringArray.length; i++) {
+            try {
+                arr1[i] = Integer.parseInt(stringArray[i]);
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка: введены некорректные данные. Введите числа через пробел.");
+                return;
+            }
+        }
+        System.out.println("Массив чисел: " + Arrays.toString(arr1));
+        System.out.print("Введите число для поиска: ");
+        int x2 = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println(main.findFirst(arr1, x2));
 
         System.out.println("Задание 4.3: ");
-        int[] arr2 = {1, -2, -7, 4, 2, -10, 5};
-        System.out.println("  Массив чисел: " + Arrays.toString(arr2));
-        System.out.println(main.maxAbs(arr2));
-
+        System.out.print("Введите массив чисел через пробел: ");
+        String[] arr3Input = scanner.nextLine().split(" ");
+        int[] arr3 = new int[arr3Input.length];
+        for (int i = 0; i < arr3Input.length; i++) {
+            arr3[i] = Integer.parseInt(arr3Input[i]);
+        }
+        System.out.println(main.maxAbs(arr3));
 
         System.out.println("Задание 4.5: ");
-        int[] arr6 = {1, 2, 3, 4, 5};
-        int[] ins = {7, 8, 9};
-        int pos = 3;
-        int[] result = main.add(arr6, ins, pos);
-        System.out.println("  Массив чисел: " + Arrays.toString(arr6));
+        System.out.print("Введите массив чисел через пробел: ");
+        String[] arr5Input = scanner.nextLine().split(" ");
+        int[] arr5 = new int[arr5Input.length];
+        for (int i = 0; i < arr5Input.length; i++) {
+            arr5[i] = Integer.parseInt(arr5Input[i]);
+        }
+        System.out.print("Введите массив чисел для вставки через пробел: ");
+        String[] insInput = scanner.nextLine().split(" ");
+        int[] ins = new int[insInput.length];
+        for (int i = 0; i < insInput.length; i++) {
+            ins[i] = Integer.parseInt(insInput[i]);
+        }
+        System.out.print("Введите позицию для вставки: ");
+        int pos = scanner.nextInt();
+        scanner.nextLine();
+        int[] result = main.add(arr5, ins, pos);
         if (result != null) {
-            System.out.print("  Ответ: ");
-            for (int num : result) {
-                System.out.print(num + " ");
+            System.out.print("Ответ: ");
+            for (int num2 : result) {
+                System.out.print(num2 + " ");
             }
             System.out.println();
         }
 
         System.out.println("Задание 4.7: ");
-        int[] arr7 = {1, 2, 3, 4, 5};
-        int[] reversedArr = main.reverseBack(arr7);
-        System.out.println("  Массив чисел: " + Arrays.toString(arr7));
-        System.out.print("  Ответ: ");
-        for (int num : reversedArr) {
-            System.out.print(num + " ");
+        System.out.print("Введите массив чисел через пробел: ");
+        String[] arr7Input = scanner.nextLine().split(" ");
+        int[] arr7 = new int[arr7Input.length];
+        for (int i = 0; i < arr7Input.length; i++) {
+            arr7[i] = Integer.parseInt(arr7Input[i]);
         }
-
+        int[] reversedArr = main.reverseBack(arr7);
+        System.out.print("Ответ: ");
+        for (int num3 : reversedArr) {
+            System.out.print(num3 + " ");
+        }
         System.out.println();
+
         System.out.println("Задание 4.9: ");
-        int[] arr5 = {1, 2, 3, 8, 2, 2, 9};
-        int xx = 2;
-        System.out.println("  Массив чисел: " + Arrays.toString(arr5));
-        int[] result4 = main.findAll(arr5, xx);
+        System.out.print("Введите массив чисел через пробел: ");
+        String[] arr9Input = scanner.nextLine().split(" ");
+        int[] arr9 = new int[arr9Input.length];
+        for (int i = 0; i < arr9Input.length; i++) {
+            arr9[i] = Integer.parseInt(arr9Input[i]);
+        }
+        System.out.print("Введите число для поиска: ");
+        int xx = scanner.nextInt();
+        scanner.nextLine();
+        int[] result4 = main.findAll(arr9, xx);
+        System.out.print("Ответ: ");
         for (int index : result4) {
             System.out.print(index + " ");
         }
-
+        System.out.println();
+        scanner.close();
     }
+
     public double fraction(double x) {
         System.out.print("  Входные данные: ");
         System.out.println(x);
         System.out.print("  Ответ: ");
         return x - (int)x;
     }
+
     public int charToNum(char x) {
         System.out.print("  Входные данные: ");
         System.out.println(x);
         System.out.print("  Ответ: ");
         return x - '0';
     }
+
     public boolean is2Digits(int x) {
         System.out.print("  Входные данные: ");
         System.out.println(x);
@@ -154,6 +227,7 @@ public class Main {
         }
         return num >= min && num <= max;
     }
+
     public boolean isEqual(int a, int b, int c) {
         System.out.print("  Входные данные: ");
         System.out.print(a);
@@ -165,7 +239,6 @@ public class Main {
         return (a == b) && (b == c);
     }
 
-
     public int abs(int x) {
         System.out.print("  Входные данные: ");
         System.out.println(x);
@@ -175,6 +248,7 @@ public class Main {
         }
         return x;
     }
+
     public boolean is35(int x) {
         System.out.print("  Входные данные: ");
         System.out.println(x);
@@ -183,6 +257,7 @@ public class Main {
         boolean del5 = (x % 5 == 0);
         return (del3 || del5) && !(del3 && del5);
     }
+
     public int max3(int x, int y, int z) {
         System.out.print("  Входные данные: ");
         System.out.print(x);
@@ -203,6 +278,7 @@ public class Main {
             return z;
         }
     }
+
     public int sum2(int x, int y) {
         System.out.print("  Входные данные: ");
         System.out.print(x);
@@ -216,20 +292,26 @@ public class Main {
             return sum;
         }
     }
+
     public String day(int x) {
-        System.out.print("  Входные данные: ");
-        System.out.println(x);
-        System.out.print("  Ответ: ");
-        return switch (x) {
-            case 1 -> "понедельник";
-            case 2 -> "вторник";
-            case 3 -> "среда";
-            case 4 -> "четверг";
-            case 5 -> "пятница";
-            case 6 -> "суббота";
-            case 7 -> "воскресенье";
-            default -> "это не день недели";
-        };
+        switch (x) {
+            case 1:
+                return "понедельник";
+            case 2:
+                return "вторник";
+            case 3:
+                return "среда";
+            case 4:
+                return "четверг";
+            case 5:
+                return "пятница";
+            case 6:
+                return "суббота";
+            case 7:
+                return "воскресенье";
+            default:
+                return "это не день недели";
+        }
     }
 
     public String listNums(int x) {
@@ -242,6 +324,7 @@ public class Main {
         System.out.print("  Ответ: ");
         return result.toString();
     }
+
     public String chet(int x) {
         StringBuilder result = new StringBuilder();
         System.out.print("  Входные данные: ");
@@ -252,6 +335,7 @@ public class Main {
         System.out.print("  Ответ: ");
         return result.toString();
     }
+
     public int numLen(long x) {
         int count = 0;
         System.out.print("  Входные данные: ");
@@ -270,6 +354,7 @@ public class Main {
         System.out.print("  Ответ: ");
         return count;
     }
+
     public void square(int x) {
         System.out.print("  Входные данные: ");
         System.out.println(x);
@@ -283,6 +368,7 @@ public class Main {
             System.out.println();
         }
     }
+
     public void rightTriangle(int x) {
         System.out.print("  Входные данные: ");
         System.out.println(x);
@@ -363,7 +449,3 @@ public class Main {
         return ind;
     }
 }
-
-
-
-
